@@ -24,6 +24,10 @@ mongoose.connect(config.mongoURI, {
 
 app.get('/', (req, res) => res.send('Hello World! hh'))
 
+app.get('/api/hello', (req, res)=>{
+    res.send("Hello")
+})
+
 app.post('/api/users/register', (req, res)=>{
     const user = new User(req.body)
 
